@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: antiquewhite;
+  font-family: 'Varela Round', sans-serif;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1 {
+  color: blue;
+}
