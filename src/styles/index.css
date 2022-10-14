@@ -50,6 +50,7 @@ h3 {
   padding-right: 1em;
   opacity: 1;
   animation: fade 1s linear;
+  background-color: #f6f8fa;
 }
 @keyframes fade {
   0% { opacity: 0 }
@@ -84,6 +85,8 @@ h3 {
   flex-direction: column;
   height: 100%;
   width: 25%;
+  background-color: white;
+  box-shadow: 1px 2px 7px 0px;
 }
 
 .product-details-container {
@@ -139,6 +142,7 @@ img {
 
 .line-graph-container {
   min-height: 50%;
+  background-color: white;
 }
 
 .graph-dimensions {
@@ -150,6 +154,7 @@ img {
 .table-container {
   width: 100%;
   overflow: scroll;
+  background-color: white;
 }
 
 table {
@@ -166,7 +171,7 @@ td, th {
 th {
   position: sticky;
   top: 0;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   padding-top: 1em;
   padding-bottom: 1em;
 }

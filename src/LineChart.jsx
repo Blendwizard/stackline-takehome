@@ -31,7 +31,6 @@ const LineChart = () => {
   const retailSales = data.sales.map((week) => week.retailSales);
   const wholeSales = data.sales.map((week) => week.wholesaleSales);
   const labels = data.sales.map((week) => week.weekEnding);
-    console.log(wholeSales)
 
 
   const options = {
@@ -71,8 +70,8 @@ const LineChart = () => {
         position: 'top',
       },
       title: {
-        display: false,
-        text: 'Chart.js Line Chart',
+        display: true,
+        text: 'Retail Sales',
       },
       tooltip: {
         intersect: false,
@@ -104,9 +103,11 @@ const LineChart = () => {
 
 
   return (
-    <div className='graph-dimensions'>
-      <Line options={options} data={chartData} />
-    </div>
+    <>
+      <div className='graph-dimensions'>
+        <Line options={options} data={chartData} />
+      </div>
+    </>
   )
 };
 
