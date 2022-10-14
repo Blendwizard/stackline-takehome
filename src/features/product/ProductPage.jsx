@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import LineChart from "../../LineChart.jsx";
 import mock_api_response from "../../data/mock_api.js";
 import { useSelector, useDispatch } from 'react-redux';
@@ -38,20 +38,29 @@ const ProductPage = () => {
     dispatch(fetchProductData())
   }, []);
 
-  return (
+  const renderView = () => {
+    if (loading) return <p>Loading data...</p>
+    if (hasError) return <p>Cannot display data...</p>
 
-    <div className="product-display">
-      <div className="horizontal-content">
-        <SideBar></SideBar>
-        <div className="vertical-content">
-          <div className="line-graph-container">
-            <LineChart />
+    return (
+      <div className="product-display">
+        <div className="horizontal-content">
+          <SideBar></SideBar>
+          <div className="vertical-content">
+            <div className="line-graph-container">
+              <LineChart />
+            </div>
+            <div className="table-container"></div>
           </div>
-          <div className="table-container"></div>
         </div>
       </div>
-    </div>
+    )
+  };
 
+  return (
+    <>
+      {renderView()}
+    </>
   )
 };
 

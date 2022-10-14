@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import mock_api_response from "../../data/mock_api";
 
 export const initialState = {
-  loading: false,
+  loading: true,
   hasError: false,
   data: []
 };

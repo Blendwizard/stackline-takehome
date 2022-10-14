@@ -63,7 +63,7 @@ h3 {
 
 .navbar {
   height: 10vh;
-  background-color:aquamarine;
+  background-color:#052849;
 }
 
 .sidebar {
@@ -130,18 +130,19 @@ img {
 
 
 .line-graph-container {
-  min-height: 70%;
+  min-height: 50%;
   border: 1px solid blue;
+}
+
+.graph-dimensions {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .table-container {
   width: 100%;
   border: 1px solid burlywood;
-}
-.table-dimensions {
-  position: relative;
-  width: 100%;
-  height: 100%;
 }
 
 
