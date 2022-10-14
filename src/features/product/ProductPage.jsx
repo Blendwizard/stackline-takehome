@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import LineChart from "../../LineChart.jsx";
 import ProductTable from "../../ProductTable.jsx";
+import { MoonLoader } from 'react-spinners';
 import mock_api_response from "../../data/mock_api.js";
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchProductData, productSelector } from "./productSlice.js";
@@ -31,6 +32,14 @@ const SideBar = () => {
   )
 }
 
+const LoadingDisplay = () => {
+  return (
+    <div className="loading-status">
+      <MoonLoader />
+    </div>
+  )
+};
+
 const ProductPage = () => {
   const dispatch = useDispatch();
   const { data, loading, hasError } = useSelector(productSelector);
@@ -40,7 +49,7 @@ const ProductPage = () => {
   }, []);
 
   const renderView = () => {
-    if (loading) return <p>Loading data...</p>
+    if (loading) return <LoadingDisplay />
     if (hasError) return <p>Cannot display data...</p>
 
     return (
