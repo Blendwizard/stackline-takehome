@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/Blendwizard/stackline-takehome/issues"
   },
-  "homepage": "https://Blendwizard.github.io/stackline-takehome",
+  "homepage": "https://github.com/Blendwizard/stackline-takehome#readme",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.6",
     "chart.js": "^3.9.1",
