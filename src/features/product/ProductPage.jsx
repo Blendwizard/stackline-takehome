@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import LineChart from "../../LineChart.jsx";
+import ProductTable from "../../ProductTable.jsx";
 import mock_api_response from "../../data/mock_api.js";
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchProductData, productSelector } from "./productSlice.js";
@@ -50,7 +51,9 @@ const ProductPage = () => {
             <div className="line-graph-container">
               <LineChart />
             </div>
-            <div className="table-container"></div>
+            <div className="table-container">
+              <ProductTable />
+            </div>
           </div>
         </div>
       </div>
