@@ -1,6 +1,8 @@
 import React, {useEffect} from "react";
 import Counter from "../counter/Counter.jsx";
-import data from "../../data/mock_api.js";
+import mock_api_response from "../../data/mock_api.js";
+import { useSelector, useDispatch } from 'react-redux';
+import { productSelector } from "./productSlice.js";
 
 
 
@@ -24,24 +26,14 @@ const SideBar = () => {
 
 const ProductPage = () => {
 
+  const { data, loading, hasError } = useSelector(productSelector);
+
+  console.log("data: ", data);
+
   useEffect(() => {
-    fetchData(data);
+
   }, []);
 
-
-  const fetchToAPI = (data) => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => resolve(data), 1000);
-    });
-  };
-
-  const fetchData = async (data) => {
-    try {
-      const res = await fetchToAPI(data);
-    } catch (e) {
-      alert("Error fetching data");
-    }
-  };
 
 
   return (

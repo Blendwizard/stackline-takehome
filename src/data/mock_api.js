@@ -1,4 +1,4 @@
-const data = [
+const mock_api_response = [
   {
     "id": "B007TIE0GQ",
     "title": "Shark Ninja",
@@ -397,4 +397,4 @@ const data = [
   }
 ];
 
-export default data;
+export default mock_api_response;
