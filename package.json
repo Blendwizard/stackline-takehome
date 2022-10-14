@@ -1,5 +1,5 @@
 {
-
+  "homepage": "https://blendwizard.github.io/stackline-takehome/",
   "name": "stackline-takehome",
   "version": "1.0.0",
   "description": "A fun front end exercise utilizing React/Redux",
@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/Blendwizard/stackline-takehome/issues"
   },
-  "homepage": "https://github.com/Blendwizard/stackline-takehome#readme",
+
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.6",
     "chart.js": "^3.9.1",
