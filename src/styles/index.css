@@ -53,6 +53,12 @@ h3 {
   padding-top: 3em;
   padding-left: 1em;
   padding-right: 1em;
+  opacity: 1;
+  animation: fade 1s linear;
+}
+@keyframes fade {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
 }
 
 .horizontal-content {
