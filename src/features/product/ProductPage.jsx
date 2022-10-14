@@ -1,5 +1,8 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Counter from "../counter/Counter.jsx";
+import data from "../../data/mock_api.js";
+
+
 
 const SideBar = () => {
 
@@ -20,6 +23,26 @@ const SideBar = () => {
 }
 
 const ProductPage = () => {
+
+  useEffect(() => {
+    fetchData(data);
+  }, []);
+
+
+  const fetchToAPI = (data) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => resolve(data), 1000);
+    });
+  };
+
+  const fetchData = async (data) => {
+    try {
+      const res = await fetchToAPI(data);
+    } catch (e) {
+      alert("Error fetching data");
+    }
+  };
+
 
   return (
     <div className="product-display">
