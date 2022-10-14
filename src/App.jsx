@@ -1,9 +1,12 @@
 import React from "react";
+import logo from '../public/images/stackline_logo.svg';
 import ProductPage from "./features/product/ProductPage.jsx";
 
 const NavBar = () => {
   return (
-    <div className="navbar"></div>
+    <div className="navbar">
+      <img src={logo}></img>
+    </div>
   )
 };
 
