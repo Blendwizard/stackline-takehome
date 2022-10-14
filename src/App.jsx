@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../public/images/stackline_logo.svg';
+import logo from '../docs/images/stackline_logo.svg';
 import ProductPage from "./features/product/ProductPage.jsx";
 
 const NavBar = () => {
