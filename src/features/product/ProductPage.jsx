@@ -2,17 +2,23 @@ import React, {useEffect} from "react";
 import Counter from "../counter/Counter.jsx";
 import mock_api_response from "../../data/mock_api.js";
 import { useSelector, useDispatch } from 'react-redux';
-import { productSelector } from "./productSlice.js";
+import { fetchProductData, productSelector } from "./productSlice.js";
 
 
 
 const SideBar = () => {
-
+  const { data, loading, hasError } = useSelector(productSelector);
+  console.log(data);
   return (
     <div className="sidebar">
       <div className="product-details-container">
-        <div className="product-img"></div>
-        <div className="product-summary"></div>
+        <div className="product-img">
+          <img src={data.image}></img>
+        </div>
+        <div className="product-summary">
+          <h3>{data.title}</h3>
+          <p>{data.subtitle}</p>
+        </div>
       </div>
       <div className="btn-group">
         <button className="option-btn">Pantry</button>
@@ -25,18 +31,15 @@ const SideBar = () => {
 }
 
 const ProductPage = () => {
-
+  const dispatch = useDispatch();
   const { data, loading, hasError } = useSelector(productSelector);
 
-  console.log("data: ", data);
-
   useEffect(() => {
-
+    dispatch(fetchProductData())
   }, []);
 
-
-
   return (
+
     <div className="product-display">
       <div className="horizontal-content">
         <SideBar></SideBar>
