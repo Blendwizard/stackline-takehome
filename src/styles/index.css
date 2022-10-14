@@ -1,0 +1,123 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: antiquewhite;
+  font-family: 'Varela Round', sans-serif;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+h1 {
+  color: blue;
+}
+
+.global-container {
+  width: 100vw;
+}
+
+.product-display {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid green;
+  height: 90vh;
+  padding-top: 3em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.horizontal-content {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid orange;
+  width: 100%;
+  height: 100%;
+  gap: 1.5em;
+
+}
+
+.vertical-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+  border: 1px dotted black;
+  height: 20%;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  height: 10vh;
+  background-color:aquamarine;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 25%;
+  border: 1px dotted purple;
+}
+
+.product-details-container {
+  border: 1px solid purple;
+  min-height: 30%;
+}
+
+.product-summary {
+  display: flex;
+  border: 0.5px solid black;
+  min-height: 20%;
+}
+
+.product-img {
+  border: 1px dotted pink;
+  width: 100%;
+  height: 70%;
+}
+
+.btn-group {
+  border: 1px dotted red;
+  height: 10%;
+  padding: 1em;
+  gap: 0.4em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.option-btn {
+  border: 1.5px solid #0000001a;
+  background-color: white;
+  border-radius: 5px;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+
+.line-graph-container {
+  width: 100%;
+  min-height: 70%;
+  border: 1px solid blue;
+}
+
+.table-container {
+  width: 100%;
+  border: 1px solid burlywood;
+}
+
+
+

@@ -3,11 +3,14 @@ import { createRoot } from "react-dom/client";
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import App from './App.jsx';
-import './index.css';
+import store from './store/store.js';
+import './styles/index.css';
 
 const root = createRoot(document.getElementById("root"));
 
 
 root.render(
-  <App />
+  <Provider store={store}>
+    <App />
+  </Provider>
 );

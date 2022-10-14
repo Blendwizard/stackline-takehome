@@ -1,8 +1,20 @@
 import React from "react";
+import ProductPage from "./features/product/ProductPage.jsx";
+
+const NavBar = () => {
+  return (
+    <div className="navbar"></div>
+  )
+};
 
 const App = () => {
   return (
-    <h1>Hello world!</h1>
+    <>
+      <div className="global-container">
+        <NavBar></NavBar>
+        <ProductPage />
+      </div>
+    </>
   )
 };
 
