@@ -122,6 +122,12 @@ img {
   padding-right: 1em;
 }
 
+.option-btn:hover {
+  color: red;
+  background-color: #e1e1e1;
+
+}
+
 
 .line-graph-container {
   width: 100%;
